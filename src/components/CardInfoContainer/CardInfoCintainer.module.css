@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mainText {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.iconButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: 24px;
+}
+
+.icon {
+  fill: transparent;
+  stroke: #2f2f2f;
+}
+
+.reviewsContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.infoItem {
+  background-color: lightgrey;
+  padding: 12px 18px;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 20px;
+}

@@ -1,0 +1,15 @@
+.cardContainer {
+  display: flex;
+  width: 888px;
+  height: 358px;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  padding: 24px;
+  box-sizing: border-box;
+  gap: 24px;
+}
+
+.image {
+  width: 290px;
+  height: 310px;
+}
