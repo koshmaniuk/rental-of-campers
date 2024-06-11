@@ -22,7 +22,7 @@ const CardInfoContainer = ({
       <div className={css.mainInfo}>
         <h2 className={css.mainText}>{name}</h2>
         <div className={css.price}>
-          <p className={css.mainText}>${price}</p>
+          <p className={css.mainText}>€{price}</p>
           <button className={css.iconButton}>
             <svg width="24px" height="24px" className={css.icon}>
               <use href="sprite.svg#icon-heart"></use>

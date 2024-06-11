@@ -1,3 +1,24 @@
+.titleText {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 48px;
+}
+
 .detailsText {
-  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.detailsContainer {
+  width: 430px;
+  height: 286px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }

@@ -25,6 +25,8 @@ const ListSection = () => {
           img={camper.gallery}
           reviews={camper.reviews.length}
           reviewsRating={camper.reviews[0].reviewer_rating}
+          details={camper.details}
+          camper={camper}
         />
       ))}
     </ul>

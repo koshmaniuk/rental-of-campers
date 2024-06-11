@@ -19,6 +19,7 @@ const CamperCard = ({
   img,
   reviews,
   reviewsRating,
+  camper,
 }) => {
   const [showModal, setShowModal] = useState(false);
   const handleShowMore = () => {
@@ -66,6 +67,7 @@ const CamperCard = ({
           reviewsRating={reviewsRating}
           image={img}
           onClose={handleCloseModal}
+          camper={camper}
         />
       )}
     </li>

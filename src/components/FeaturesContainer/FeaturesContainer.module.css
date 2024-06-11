@@ -1,0 +1,8 @@
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: 530px;
+
+  gap: 44px;
+}
