@@ -1,11 +1,18 @@
+import { useSelector } from "react-redux";
+import { selectCampers } from "../../redux//campers/selectors";
+
 import css from "./FiltersSection.module.css";
+
 const FiltersSection = () => {
+  const campers = useSelector(selectCampers);
+  const locations = campers.map((camper) => camper.location);
   return (
     <div className={css.container}>
       <p>Location</p>
       <select name="location" id="location" className={css.location}>
-        <option value="xs">Kyiv, Ukraine</option>
-        <option value="xs">Ivano-Frankivsk, Ukraine</option>
+        {locations.map((location) => (
+          <option>{location}</option>
+        ))}
       </select>
       <p className={css.subtitleText}>Filters</p>
       <form className={css.filtersForm}>

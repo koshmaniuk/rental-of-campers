@@ -5,13 +5,12 @@ import { selectCampers } from "../../redux//campers/selectors";
 
 const ListSection = () => {
   const campers = useSelector(selectCampers);
-  console.log(campers);
   return (
     <ul className={css.container}>
       {campers.map((camper) => (
         <CamperCard
           key={camper._id}
-          camperId={camper.id}
+          camperId={camper._id}
           name={camper.name}
           price={camper.price}
           rating={camper.rating}
@@ -23,6 +22,9 @@ const ListSection = () => {
           kitchen={camper.details.kitchen}
           beds={camper.details.beds}
           ac={camper.details.airConditioner}
+          img={camper.gallery}
+          reviews={camper.reviews.length}
+          reviewsRating={camper.reviews[0].reviewer_rating}
         />
       ))}
     </ul>

@@ -4,6 +4,7 @@
   background-color: #fff;
   border-radius: 20px;
   padding: 40px;
+  overflow-y: auto;
 }
 
 .modalOverlay {
@@ -20,11 +21,38 @@
 
 .reviewsContainer {
   display: flex;
-  gap: 16px;
+  align-items: center;
   margin-bottom: 24px;
 }
 
 .imageContainer {
   display: flex;
   gap: 16px;
+}
+
+.image {
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ratingIcon {
+  fill: #ffc531;
+  margin-right: 4px;
+}
+
+.locationIcon {
+  fill: transparent;
+  stroke: #2f2f2f;
+  margin-right: 4px;
+}
+
+.closeIcon {
+  stroke: #2f2f2f;
+  fill: #2f2f2f;
+}
+
+.closeBtn {
+  cursor: pointer;
 }

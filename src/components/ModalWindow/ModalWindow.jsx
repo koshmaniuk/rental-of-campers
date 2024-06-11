@@ -1,30 +1,55 @@
 import FeaturesContainer from "../FeaturesContainer/FeaturesContainer";
 import css from "./ModalWindow.module.css";
-const ModalWindow = () => {
+const ModalWindow = ({
+  camperId,
+  name,
+  price,
+  rating,
+  location,
+  adults,
+  transmission,
+  engine,
+  description,
+  kitchen,
+  beds,
+  ac,
+  img,
+  reviews,
+  reviewsRating,
+  image,
+  onClose,
+}) => {
   return (
     <div className={css.modalOverlay}>
       <div className={css.container}>
-        <h2 className={css.mainText}>Mavericks</h2>
+        <span onClick={onClose} className={css.closeBtn}>
+          <svg width="32px" height="32px" className={css.closeIcon}>
+            <use href="sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+
+        <h2 className={css.mainText}>{name}</h2>
         <div className={css.reviewsContainer}>
-          <a href="">
-            <p>4.4(2 reviews)</p>
+          <svg width="16px" height="16px" className={css.ratingIcon}>
+            <use href="sprite.svg#icon-rating"></use>
+          </svg>
+          <a href="" className={css.reviewsRating}>
+            {reviewsRating}({reviews} reviews)
           </a>
-          <p>Kyiv, Ukraine</p>
+          <div className={css.locationContainer}>
+            <svg width="16px" height="16px" className={css.locationIcon}>
+              <use href="sprite.svg#icon-map"></use>
+            </svg>
+            {location}
+          </div>
         </div>
         <p className={css.mainText}>$8000</p>
         <div className={css.imageContainer}>
-          <img src="Switch.jpg" alt="" className={css.image} />
-          <img src="Switch.jpg" alt="" className={css.image} />
-          <img src="Switch.jpg" alt="" className={css.image} />
+          {image.map((imag) => (
+            <img src={imag} alt="" className={css.image} />
+          ))}
         </div>
-        <p>
-          Embrace simplicity and freedom with the Mavericks panel truck, an
-          ideal choice for solo travelers or couples seeking a compact and
-          efficient way to explore the open roads. This no-frills yet reliable
-          panel truck offers the essentials for a comfortable journey, making it
-          the perfect companion for those who value simplicity and
-          functionality.
-        </p>
+        <p>{description}</p>
         <div className={css.linksContainer}>
           <a href="">Features</a>
           <a href="">Reviews</a>

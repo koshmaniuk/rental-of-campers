@@ -12,4 +12,6 @@
 .image {
   width: 290px;
   height: 310px;
+  object-fit: cover;
+  border-radius: 10px;
 }

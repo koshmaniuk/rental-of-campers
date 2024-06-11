@@ -38,9 +38,14 @@
   stroke: #2f2f2f;
 }
 
+.ratingIcon {
+  fill: #ffc531;
+  margin-right: 4px;
+}
+
 .reviewsContainer {
   display: flex;
-  gap: 16px;
+  align-items: center;
   margin-bottom: 24px;
 }
 
@@ -52,6 +57,22 @@
   margin-bottom: 24px;
 }
 
+.reviewsRating {
+  margin-right: 16px;
+  color: #2f2f2f;
+}
+
+.locationIcon {
+  fill: transparent;
+  stroke: #2f2f2f;
+  margin-right: 4px;
+}
+
+.locationContainer {
+  display: flex;
+  align-items: center;
+}
+
 .infoItem {
   display: flex;
   background-color: lightgrey;
@@ -59,6 +80,7 @@
   border-radius: 100px;
   font-size: 16px;
   line-height: 20px;
+  gap: 8px;
 }
 
 .showMoreBtn {
@@ -77,4 +99,8 @@
 
 .description {
   margin-bottom: 24px;
+  width: 525px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
