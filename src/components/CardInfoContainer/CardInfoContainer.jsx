@@ -1,3 +1,4 @@
+import ModalWindow from "../ModalWindow/ModalWindow";
 import css from "./CardInfoCintainer.module.css";
 const CardInfoContainer = () => {
   return (
@@ -19,27 +20,49 @@ const CardInfoContainer = () => {
         </a>
         <p>Kyiv, Ukraine</p>
       </div>
-      <p>The pictures shown here are example vehicles of the respective.</p>
+      <p className={css.description}>
+        The pictures shown here are example vehicles of the respective.
+      </p>
       <ul className={css.info}>
         <li className={css.infoItem}>
-          <p>2 adulaaaddts</p>
-        </li>
-        <li className={css.infoItem}>
-          <p>2 adulqqqqts</p>
-        </li>
-        <li className={css.infoItem}>
-          <p>2 adudasdaslts</p>
-        </li>
-        <li className={css.infoItem}>
-          <p>2 adultdasdadass</p>
-        </li>
-        <li className={css.infoItem}>
+          <svg width="20px" height="20px" className={css.infoIcons}>
+            <use href="sprite.svg#icon-users"></use>
+          </svg>
           <p>2 adults</p>
         </li>
         <li className={css.infoItem}>
-          <p>2 aduldasdasdasts</p>
+          <svg width="20px" height="20px" className={css.icon}>
+            <use href="sprite.svg#icon-automatic"></use>
+          </svg>
+          <p>Automatic</p>
+        </li>
+        <li className={css.infoItem}>
+          <svg width="20px" height="20px" className={css.infoIcons}>
+            <use href="sprite.svg#icon-petrol"></use>
+          </svg>
+          <p>Petrol</p>
+        </li>
+        <li className={css.infoItem}>
+          <svg width="20px" height="20px" className={css.icon}>
+            <use href="sprite.svg#icon-kitchen"></use>
+          </svg>
+          <p>Kitchen</p>
+        </li>
+        <li className={css.infoItem}>
+          <svg width="20px" height="20px" className={css.icon}>
+            <use href="sprite.svg#icon-beds"></use>
+          </svg>
+          <p>1 bed</p>
+        </li>
+        <li className={css.infoItem}>
+          <svg width="20px" height="20px" className={css.icon}>
+            <use href="sprite.svg#icon-ac"></use>
+          </svg>
+          <p>AC</p>
         </li>
       </ul>
+      <button className={css.showMoreBtn}>Show more</button>
+      {/* <ModalWindow /> */}
     </div>
   );
 };
