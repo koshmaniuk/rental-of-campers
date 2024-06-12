@@ -47,18 +47,14 @@
   font-weight: bold;
 }
 
-/**
-  |============================
-  | 
-  |============================
-*/
 
-/* Приховуємо стандартний чекбокс */
+
+
 .checkboxContainer input[type="checkbox"] {
   display: none;
 }
 
-/* Стилізація контейнера */
+
 .checkboxContainer {
   display: flex;
   cursor: pointer;
@@ -69,7 +65,7 @@
   border-radius: 10px;
 }
 
-/* Стилізація кастомного чекбокса */
+
 .checkboxContainer .checkmark {
   display: flex;
   flex-direction: column;
@@ -94,11 +90,7 @@
   stroke: #2f2f2f;
 }
 
-/**
-  |============================
-  | 
-  |============================
-*/
+
 
 .filterBtn {
   width: 173px;
@@ -116,4 +108,12 @@
 .text {
   width: 74px;
   text-align: center;
+}
+
+
+
+.radio {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }

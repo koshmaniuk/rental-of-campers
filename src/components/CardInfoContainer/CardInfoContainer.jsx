@@ -107,7 +107,6 @@ const CardInfoContainer = ({
       <button className={css.showMoreBtn} onClick={onClick}>
         Show more
       </button>
-      {/* <ModalWindow /> */}
     </div>
   );
 };

@@ -1,7 +1,9 @@
+import { useState } from "react";
 import FeaturesContainer from "../FeaturesContainer/FeaturesContainer";
 import BookContainer from "./BookContainer/BookContainer";
 
 import css from "./ModalWindow.module.css";
+import ReviewsContainer from "../ReviewsContainer/ReviewsContainer";
 
 const ModalWindow = ({
   camperId,
@@ -24,6 +26,11 @@ const ModalWindow = ({
   details,
   camper,
 }) => {
+  const [activeComponent, setActiveComponent] = useState("features");
+  const handleLinkClick = (component) => (e) => {
+    e.preventDefault();
+    setActiveComponent(component);
+  };
   return (
     <div className={css.modalOverlay}>
       {/* modal */}
@@ -63,15 +70,28 @@ const ModalWindow = ({
         {/* description */}
         <p className={css.descrText}>{description}</p>
         <div className={css.linksContainer}>
-          <a href="" className={css.linksText}>
+          <a
+            href="#"
+            onClick={handleLinkClick("features")}
+            className={css.linksText}
+          >
             Features
           </a>
-          <a href="" className={css.linksText}>
+          <a
+            href="#"
+            onClick={handleLinkClick("reviews")}
+            className={css.linksText}
+          >
             Reviews
           </a>
         </div>
         <div className={css.subPageContainer}>
-          <FeaturesContainer camper={camper} />
+          {activeComponent === "features" && (
+            <FeaturesContainer camper={camper} />
+          )}
+          {activeComponent === "reviews" && (
+            <ReviewsContainer camper={camper} />
+          )}
           <BookContainer />
         </div>
       </div>
