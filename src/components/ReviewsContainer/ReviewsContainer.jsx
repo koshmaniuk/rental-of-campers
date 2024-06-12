@@ -13,19 +13,19 @@ const ReviewsContainer = ({ camper }) => {
             <div className={css.stars}>
               <p className={css.name}>{review.reviewer_name}</p>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href="sprite.svg#icon-rating"></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href="sprite.svg#icon-rating"></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href="sprite.svg#icon-rating"></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href="sprite.svg#icon-rating"></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href="sprite.svg#icon-rating"></use>
               </svg>
             </div>
           </div>

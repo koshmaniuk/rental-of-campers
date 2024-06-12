@@ -38,7 +38,7 @@ const ModalWindow = ({
         {/* close icon */}
         <span onClick={onClose} className={css.closeBtn}>
           <svg width="32px" height="32px" className={css.closeIcon}>
-            <use href="../../../public/sprite.svg#icon-close"></use>
+            <use href="sprite.svg#icon-close"></use>
           </svg>
         </span>
         {/* name */}
@@ -46,7 +46,7 @@ const ModalWindow = ({
         {/* reviews */}
         <div className={css.reviewsContainer}>
           <svg width="16px" height="16px" className={css.ratingIcon}>
-            <use href="../../../public/sprite.svg#icon-rating"></use>
+            <use href="sprite.svg#icon-rating"></use>
           </svg>
           <a href="" className={css.reviewsRating}>
             {reviewsRating}({reviews} reviews)
@@ -54,7 +54,7 @@ const ModalWindow = ({
           {/* location */}
           <div className={css.locationContainer}>
             <svg width="16px" height="16px" className={css.locationIcon}>
-              <use href="../../../public/sprite.svg#icon-map"></use>
+              <use href="sprite.svg#icon-map"></use>
             </svg>
             {location}
           </div>
