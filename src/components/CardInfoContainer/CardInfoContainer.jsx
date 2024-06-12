@@ -46,21 +46,21 @@ const CardInfoContainer = ({
               height="24px"
               className={isFavorite ? css.iconActive : css.icon}
             >
-              <use href="sprite.svg#icon-heart"></use>
+              <use href="../../../public/sprite.svg#icon-heart"></use>
             </svg>
           </button>
         </div>
       </div>
       <div className={css.reviewsContainer}>
         <svg width="16px" height="16px" className={css.ratingIcon}>
-          <use href="sprite.svg#icon-rating"></use>
+          <use href="../../../public/sprite.svg#icon-rating"></use>
         </svg>
         <a href="" className={css.reviewsRating}>
           {reviewsRating}({reviews} reviews)
         </a>
         <div className={css.locationContainer}>
           <svg width="16px" height="16px" className={css.locationIcon}>
-            <use href="sprite.svg#icon-map"></use>
+            <use href="../../../public/sprite.svg#icon-map"></use>
           </svg>
           {location}
         </div>
@@ -69,37 +69,37 @@ const CardInfoContainer = ({
       <ul className={css.info}>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.infoIcons}>
-            <use href="sprite.svg#icon-users"></use>
+            <use href="../../../public/sprite.svg#icon-users"></use>
           </svg>
           <p>{adults} adults</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="sprite.svg#icon-automatic"></use>
+            <use href="../../../public/sprite.svg#icon-automatic"></use>
           </svg>
           <p>{transmission}</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.infoIcons}>
-            <use href="sprite.svg#icon-petrol"></use>
+            <use href="../../../public/sprite.svg#icon-petrol"></use>
           </svg>
           <p>{engine}</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="sprite.svg#icon-kitchen"></use>
+            <use href="../../../public/sprite.svg#icon-kitchen"></use>
           </svg>
           <p>Kitchen</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="sprite.svg#icon-beds"></use>
+            <use href="../../../public/sprite.svg#icon-beds"></use>
           </svg>
           <p>{beds} bed</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="sprite.svg#icon-ac"></use>
+            <use href="../../../public/sprite.svg#icon-ac"></use>
           </svg>
           <p>AC</p>
         </li>
