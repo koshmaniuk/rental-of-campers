@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import css from "./App.module.css";
 import HomePage from "../../Pages/HomePage/HomePage";
 import CatalogPage from "../../Pages/CatalogPage/CatalogPage";
 import FavoritesPage from "../../Pages/FavoritesPage/FavoritesPage";
-import { useDispatch } from "react-redux";
-import { getCampers } from "../../redux/campers/operations";
 
 function App() {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getCampers());
-  // }, [dispatch]);
+  const [count, setCount] = useState(0);
+
   return (
     <>
       <Routes>

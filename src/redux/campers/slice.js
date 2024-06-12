@@ -17,25 +17,15 @@ const campersSlice = createSlice({
     items: [],
     loading: false,
     error: false,
-    page: 1,
-  },
-  reducers: {
-    nextPage(state) {
-      state.page = state.page + 1;
-    },
   },
   extraReducers: (builder) =>
     builder
       .addCase(getCampers.pending, handlePending)
       .addCase(getCampers.fulfilled, (state, action) => {
-        if (state.page === 1) {
-          state.items = action.payload;
-        } else {
-          state.items.push(...action.payload);
-        }
+        state.loading = false;
+        state.items = action.payload;
       })
       .addCase(getCampers.rejected, handleRejected),
 });
 
-export const { nextPage } = campersSlice.actions;
 export const campersReducer = campersSlice.reducer;

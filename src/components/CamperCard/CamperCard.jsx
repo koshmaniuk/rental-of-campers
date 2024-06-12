@@ -48,7 +48,6 @@ const CamperCard = ({
         reviews={reviews}
         reviewsRating={reviewsRating}
         onClick={handleShowMore}
-        camper={camper}
       />
       {showModal && (
         <ModalWindow
