@@ -6,11 +6,6 @@ import { getCampers } from "../../redux/campers/operations";
 import { useEffect } from "react";
 
 const CatalogPage = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getCampers());
-  }, [dispatch]);
   return (
     <div className={css.container}>
       <FiltersSection />

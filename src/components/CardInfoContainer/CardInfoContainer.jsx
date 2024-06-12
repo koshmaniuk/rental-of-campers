@@ -1,5 +1,11 @@
+import { useDispatch, useSelector } from "react-redux";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import css from "./CardInfoCintainer.module.css";
+import {
+  addFavorite,
+  removeFavorite,
+} from "../../redux/favorites/favoritesSlice";
+
 const CardInfoContainer = ({
   camperId,
   name,
@@ -16,15 +22,30 @@ const CardInfoContainer = ({
   reviews,
   reviewsRating,
   onClick,
+  camper,
 }) => {
+  const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites.items);
+  const isFavorite = favorites.some((fav) => fav._id === camper._id);
+  const handleFavoriteClick = () => {
+    if (isFavorite) {
+      dispatch(removeFavorite(camper));
+    } else {
+      dispatch(addFavorite(camper));
+    }
+  };
   return (
     <div className={css.container}>
       <div className={css.mainInfo}>
         <h2 className={css.mainText}>{name}</h2>
         <div className={css.price}>
           <p className={css.mainText}>€{price}</p>
-          <button className={css.iconButton}>
-            <svg width="24px" height="24px" className={css.icon}>
+          <button className={css.iconButton} onClick={handleFavoriteClick}>
+            <svg
+              width="24px"
+              height="24px"
+              className={isFavorite ? css.iconActive : css.icon}
+            >
               <use href="sprite.svg#icon-heart"></use>
             </svg>
           </button>

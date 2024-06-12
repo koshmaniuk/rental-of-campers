@@ -10,6 +10,12 @@ const FiltersSection = () => {
   const dispatch = useDispatch();
   const filters = useSelector((state) => state.filters);
 
+  const uniqueLocations = Array.from(
+    new Set(campers.map((camper) => camper.location))
+  );
+
+  // const locations = [...new Set(campers.map((camper) => camper.location))];
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -25,7 +31,7 @@ const FiltersSection = () => {
       },
       vehicleType: formData.get("form"),
     };
-    console.log(data);
+
     dispatch(setFilters(data));
   };
 
