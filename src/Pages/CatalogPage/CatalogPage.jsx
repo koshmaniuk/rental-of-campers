@@ -4,13 +4,17 @@ import ListSection from "../../components/ListSection/ListSection";
 import css from "./CatalogPage.module.css";
 import { getCampers } from "../../redux/campers/operations";
 import { useEffect } from "react";
+import NavBar from "../../components/NavBar/NavBar";
 
 const CatalogPage = () => {
   return (
-    <div className={css.container}>
-      <FiltersSection />
-      <ListSection />
-    </div>
+    <>
+      <NavBar />
+      <div className={css.container}>
+        <FiltersSection />
+        <ListSection />
+      </div>
+    </>
   );
 };
 

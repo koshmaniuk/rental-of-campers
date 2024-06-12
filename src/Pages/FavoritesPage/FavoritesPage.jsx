@@ -4,13 +4,17 @@ import css from "./FavoritesPage.module.css";
 import { getCampers } from "../../redux/campers/operations";
 import { useEffect } from "react";
 import ListFavoritesSection from "../../components/ListFavoritesSection/ListFavoritesSection";
+import NavBar from "../../components/NavBar/NavBar";
 
 const FavoritesPage = () => {
   return (
-    <div className={css.container}>
-      <FiltersSection />
-      <ListFavoritesSection />
-    </div>
+    <>
+      <NavBar />
+      <div className={css.container}>
+        <FiltersSection />
+        <ListFavoritesSection />
+      </div>
+    </>
   );
 };
 

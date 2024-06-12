@@ -1,7 +1,16 @@
+import { useDispatch } from "react-redux";
+import FiltersSection from "../../components/FiltersSection/FiltersSection";
+import css from "./HomePage.module.css";
+import { getCampers } from "../../redux/campers/operations";
+import { useEffect } from "react";
+import ListFavoritesSection from "../../components/ListFavoritesSection/ListFavoritesSection";
+import NavBar from "../../components/NavBar/NavBar";
+
 const HomePage = () => {
   return (
     <>
-      <h1>Home Page</h1>
+      <NavBar />
+      <div className={css.container}></div>
     </>
   );
 };
