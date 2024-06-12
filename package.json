@@ -1,7 +1,7 @@
 {
   "name": "vite-project",
   "homepage": "https://koshmaniuk.github.io/rental-of-campers/",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
