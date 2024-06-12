@@ -10,4 +10,4 @@ Overview:
 
 -Booking form overview: Once you've found the perfect camper, you can book it on our simple booking page. Features include a calendar to select your preferred dates and a form to enter personal details and comments.
 
-If you need assistance or have any questions, please contact our support team at support@roadwheels.com. We are always here to make your camper rental experience as comfortable and enjoyable as possible!
+If you need assistance or have any questions, please contact our support team at support@roamwheels.com. We are always here to make your camper rental experience as comfortable and enjoyable as possible!
