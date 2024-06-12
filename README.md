@@ -1,6 +1,7 @@
 Welcome to RoamWheels! Our site is your perfect companion for finding and booking campers for exciting adventures. Here you can explore a wide range of campers, choose one that suits your needs, and easily book it for your next journey.
 
 Overview:
+
 -Home Page Overview: The homepage is your starting point, where you can navigate to the camper listings and the favorites page.
 
 -Catalog page overview: This page allows you to explore all available camper options. Here you can use filters to narrow down your choices based on your preferences. Features include filters by camper type, amenities, and location. Each card provides detailed information about the camper, as well as high-quality images.
