@@ -5,6 +5,7 @@ import {
   addFavorite,
   removeFavorite,
 } from "../../redux/favorites/favoritesSlice";
+import { icons } from "../../assets/index";
 
 const CardInfoContainer = ({
   camperId,
@@ -46,21 +47,21 @@ const CardInfoContainer = ({
               height="24px"
               className={isFavorite ? css.iconActive : css.icon}
             >
-              <use href="../../../public/sprite.svg#icon-heart"></use>
+              <use href={`${icons}#icon-heart`}></use>
             </svg>{" "}
           </button>
         </div>
       </div>
       <div className={css.reviewsContainer}>
         <svg width="16px" height="16px" className={css.ratingIcon}>
-          <use href="../../../public/sprite.svg#icon-rating"></use>
+          <use href={`${icons}#icon-rating`}></use>
         </svg>
         <a href="" className={css.reviewsRating}>
           {reviewsRating}({reviews} reviews)
         </a>
         <div className={css.locationContainer}>
           <svg width="16px" height="16px" className={css.locationIcon}>
-            <use href="../../../public/sprite.svg#icon-map"></use>
+            <use href={`${icons}#icon-map`}></use>
           </svg>
           {location}
         </div>
@@ -69,37 +70,37 @@ const CardInfoContainer = ({
       <ul className={css.info}>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.infoIcons}>
-            <use href="../../../public/sprite.svg#icon-users"></use>
+            <use href={`${icons}#icon-users`}></use>
           </svg>
           <p>{adults} adults</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="../../../public/sprite.svg#icon-automatic"></use>
+            <use href={`${icons}#icon-automatic`}></use>
           </svg>
           <p>{transmission}</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.infoIcons}>
-            <use href="../../../public/sprite.svg#icon-petrol"></use>
+            <use href={`${icons}#icon-petrol`}></use>
           </svg>
           <p>{engine}</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="../../../public/sprite.svg#icon-kitchen"></use>
+            <use href={`${icons}#icon-kitchen`}></use>
           </svg>
           <p>Kitchen</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="../../../public/sprite.svg#icon-beds"></use>
+            <use href={`${icons}#icon-beds`}></use>
           </svg>
           <p>{beds} bed</p>
         </li>
         <li className={css.infoItem}>
           <svg width="20px" height="20px" className={css.icon}>
-            <use href="../../../public/sprite.svg#icon-ac"></use>
+            <use href={`${icons}#icon-ac`}></use>
           </svg>
           <p>AC</p>
         </li>

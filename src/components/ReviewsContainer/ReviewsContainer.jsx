@@ -1,6 +1,6 @@
 import css from "./ReviewsContainer.module.css";
 import { useSelector } from "react-redux";
-
+import { icons } from "../../assets/index";
 const ReviewsContainer = ({ camper }) => {
   return (
     <div className={css.reviewsContainer}>
@@ -13,19 +13,19 @@ const ReviewsContainer = ({ camper }) => {
             <div className={css.stars}>
               <p className={css.name}>{review.reviewer_name}</p>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href={`${icons}#icon-rating`}></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href={`${icons}#icon-rating`}></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href={`${icons}#icon-rating`}></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href={`${icons}#icon-rating`}></use>
               </svg>
               <svg width="16px" height="16px" className={css.ratingIcon}>
-                <use href="../../../public/sprite.svg#icon-rating"></use>
+                <use href={`${icons}#icon-rating`}></use>
               </svg>
             </div>
           </div>

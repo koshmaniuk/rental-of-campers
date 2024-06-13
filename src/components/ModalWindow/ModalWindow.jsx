@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FeaturesContainer from "../FeaturesContainer/FeaturesContainer";
 import BookContainer from "./BookContainer/BookContainer";
-
+import { icons } from "../../assets/index";
 import css from "./ModalWindow.module.css";
 import ReviewsContainer from "../ReviewsContainer/ReviewsContainer";
 
@@ -31,6 +31,29 @@ const ModalWindow = ({
     e.preventDefault();
     setActiveComponent(component);
   };
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose(); // Закриваємо модальне вікно при натисканні клавіші Escape
+      }
+    };
+
+    const handleClickOutside = (event) => {
+      if (event.target.classList.contains(css.modalOverlay)) {
+        onClose(); // Закриваємо модальне вікно при кліку поза ним
+      }
+    };
+
+    // Додаємо обробники подій при монтуванні компонента
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("click", handleClickOutside);
+
+    // При видаленні компонента видаляємо обробники подій
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [onClose]); // Вказуємо onClose як залежність для перезавантаження ефекту
   return (
     <div className={css.modalOverlay}>
       {/* modal */}
@@ -38,7 +61,7 @@ const ModalWindow = ({
         {/* close icon */}
         <span onClick={onClose} className={css.closeBtn}>
           <svg width="32px" height="32px" className={css.closeIcon}>
-            <use href="../../../public/sprite.svg#icon-close"></use>
+            <use href={`${icons}#icon-close`}></use>
           </svg>
         </span>
         {/* name */}
@@ -46,7 +69,7 @@ const ModalWindow = ({
         {/* reviews */}
         <div className={css.reviewsContainer}>
           <svg width="16px" height="16px" className={css.ratingIcon}>
-            <use href="../../../public/sprite.svg#icon-rating"></use>
+            <use href={`${icons}#icon-rating`}></use>
           </svg>
           <a href="" className={css.reviewsRating}>
             {reviewsRating}({reviews} reviews)
@@ -54,7 +77,7 @@ const ModalWindow = ({
           {/* location */}
           <div className={css.locationContainer}>
             <svg width="16px" height="16px" className={css.locationIcon}>
-              <use href="../../../public/sprite.svg#icon-map"></use>
+              <use href={`${icons}#icon-map`}></use>
             </svg>
             {location}
           </div>
