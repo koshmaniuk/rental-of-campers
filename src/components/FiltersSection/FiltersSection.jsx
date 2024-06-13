@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCampers } from "../../redux//campers/selectors";
 import { setFilters } from "../../redux/filters/filtersSlice";
 import css from "./FiltersSection.module.css";
-import { useState } from "react";
 
 const FiltersSection = () => {
   const campers = useSelector(selectCampers);
@@ -44,10 +43,8 @@ const FiltersSection = () => {
 
   return (
     <div className={css.container}>
-      <p className={css.subtitleText}>Filters</p>
       <form className={css.filtersForm} onSubmit={handleSubmit}>
         <p>Location</p>
-
         <select name="location" id="location" className={css.location}>
           <option value="">Select location</option>
           <option key={1} value="Ukraine, Sumy">
@@ -72,6 +69,8 @@ const FiltersSection = () => {
             </option>
           ))} */}
         </select>
+        <p className={css.subtitleText}>Filters</p>
+
         <legend className={css.titleText}>Vehicle equipment</legend>
         <fieldset className={css.equipment}>
           <label className={css.checkboxContainer}>

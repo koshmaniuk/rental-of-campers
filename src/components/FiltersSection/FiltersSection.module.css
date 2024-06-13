@@ -33,7 +33,7 @@
 }
 
 .subtitleText {
-  margin-top: 32px;
+  margin: 32px 0 14px;
 }
 
 .filtersForm {
@@ -47,13 +47,9 @@
   font-weight: bold;
 }
 
-
-
-
 .checkboxContainer input[type="checkbox"] {
   display: none;
 }
-
 
 .checkboxContainer {
   display: flex;
@@ -64,7 +60,6 @@
   width: 112px;
   border-radius: 10px;
 }
-
 
 .checkboxContainer .checkmark {
   display: flex;
@@ -90,8 +85,6 @@
   stroke: #2f2f2f;
 }
 
-
-
 .filterBtn {
   width: 173px;
   height: 56px;
@@ -110,10 +103,28 @@
   text-align: center;
 }
 
-
-
 .radio {
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  padding: 20px;
+  background: transparent;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
