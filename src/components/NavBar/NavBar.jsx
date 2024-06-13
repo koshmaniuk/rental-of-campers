@@ -6,17 +6,17 @@ const NavBar = () => {
     <nav className={css.navbar}>
       <ul className={css.navList}>
         <li className={css.navItem}>
-          <Link to="/" className={css.navLink}>
+          <Link to="/rental-of-campers/" className={css.navLink}>
             Home
           </Link>
         </li>
         <li className={css.navItem}>
-          <Link to="/catalog" className={css.navLink}>
+          <Link to="/rental-of-campers/catalog" className={css.navLink}>
             Catalog
           </Link>
         </li>
         <li className={css.navItem}>
-          <Link to="/favorites" className={css.navLink}>
+          <Link to="/rental-of-campers/favorites" className={css.navLink}>
             Favorites
           </Link>
         </li>

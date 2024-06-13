@@ -40,7 +40,8 @@ const CardInfoContainer = ({
       <div className={css.mainInfo}>
         <h2 className={css.mainText}>{name}</h2>
         <div className={css.price}>
-          <p className={css.mainText}>€{price}</p>
+          <p className={css.mainText}>€{price},00</p>
+
           <button className={css.iconButton} onClick={handleFavoriteClick}>
             <svg
               width="24px"
@@ -48,7 +49,7 @@ const CardInfoContainer = ({
               className={isFavorite ? css.iconActive : css.icon}
             >
               <use href={`${icons}#icon-heart`}></use>
-            </svg>{" "}
+            </svg>
           </button>
         </div>
       </div>
