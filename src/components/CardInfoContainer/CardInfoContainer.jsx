@@ -5,6 +5,7 @@ import {
   removeFavorite,
 } from "../../redux/favorites/favoritesSlice";
 import { icons } from "../../assets/index";
+import { Link } from "react-router-dom";
 
 const CardInfoContainer = ({
   name,
@@ -53,9 +54,9 @@ const CardInfoContainer = ({
         <svg width="16px" height="16px" className={css.ratingIcon}>
           <use href={`${icons}#icon-rating`}></use>
         </svg>
-        <a href="" className={css.reviewsRating}>
+        <Link to="" className={css.reviewsRating}>
           {reviewsRating}({reviews} reviews)
-        </a>
+        </Link>
         <div className={css.locationContainer}>
           <svg width="16px" height="16px" className={css.locationIcon}>
             <use href={`${icons}#icon-map`}></use>

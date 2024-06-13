@@ -3,6 +3,7 @@ import css from "./App.module.css";
 import HomePage from "../../Pages/HomePage/HomePage";
 import CatalogPage from "../../Pages/CatalogPage/CatalogPage";
 import FavoritesPage from "../../Pages/FavoritesPage/FavoritesPage";
+import { useDispatch } from "react-redux";
 
 function App() {
   return (

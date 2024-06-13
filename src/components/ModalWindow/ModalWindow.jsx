@@ -5,6 +5,7 @@ import { icons } from "../../assets/index";
 import css from "./ModalWindow.module.css";
 import ReviewsContainer from "../ReviewsContainer/ReviewsContainer";
 import { nanoid } from "nanoid";
+import { Link } from "react-router-dom";
 
 const ModalWindow = ({
   name,
@@ -59,9 +60,9 @@ const ModalWindow = ({
           <svg width="16px" height="16px" className={css.ratingIcon}>
             <use href={`${icons}#icon-rating`}></use>
           </svg>
-          <a href="" className={css.reviewsRating}>
+          <Link to="" className={css.reviewsRating}>
             {reviewsRating}({reviews} reviews)
-          </a>
+          </Link>
 
           <div className={css.locationContainer}>
             <svg width="16px" height="16px" className={css.locationIcon}>
@@ -81,20 +82,20 @@ const ModalWindow = ({
 
         <p className={css.descrText}>{description}</p>
         <div className={css.linksContainer}>
-          <a
-            href="#"
+          <Link
+            to="#"
             onClick={handleLinkClick("features")}
             className={css.linksText}
           >
             Features
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             onClick={handleLinkClick("reviews")}
             className={css.linksText}
           >
             Reviews
-          </a>
+          </Link>
         </div>
         <div className={css.subPageContainer}>
           {activeComponent === "features" && (
