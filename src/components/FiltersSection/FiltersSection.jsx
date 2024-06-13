@@ -78,7 +78,7 @@ const FiltersSection = () => {
             <input type="checkbox" name="AC" />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-acf"></use>
+                <use href="../../../public/sprite.svg#icon-acf"></use>
               </svg>
               <span>AC</span>
             </span>
@@ -87,7 +87,7 @@ const FiltersSection = () => {
             <input type="checkbox" name="Automatic" />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-automaticf"></use>
+                <use href="../../../public/sprite.svg#icon-automaticf"></use>
               </svg>
               <span>Automatic</span>
             </span>
@@ -96,7 +96,7 @@ const FiltersSection = () => {
             <input type="checkbox" name="Kitchen" />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-kitchenf"></use>
+                <use href="../../../public/sprite.svg#icon-kitchenf"></use>
               </svg>
               <span>Kitchen</span>
             </span>
@@ -105,7 +105,7 @@ const FiltersSection = () => {
             <input type="checkbox" name="TV" />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-tvf"></use>
+                <use href="../../../public/sprite.svg#icon-tvf"></use>
               </svg>
               <span>TV</span>
             </span>
@@ -114,7 +114,7 @@ const FiltersSection = () => {
             <input type="checkbox" name="ShowerWC" />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-showerf"></use>
+                <use href="../../../public/sprite.svg#icon-showerf"></use>
               </svg>
               <span>Shower/WC</span>
             </span>
@@ -131,7 +131,7 @@ const FiltersSection = () => {
             />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-van"></use>
+                <use href="../../../public/sprite.svg#icon-van"></use>
               </svg>
               <span>Van</span>
             </span>
@@ -145,7 +145,7 @@ const FiltersSection = () => {
             />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-fullvan"></use>
+                <use href="../../../public/sprite.svg#icon-fullvan"></use>
               </svg>
               <span className={css.text}>Fully Integrated</span>
             </span>
@@ -159,7 +159,7 @@ const FiltersSection = () => {
             />
             <span className={css.checkmark}>
               <svg width="32px" height="32px" className={css.filterIcon}>
-                <use href="sprite.svg#icon-alcovevan"></use>
+                <use href="../../../public/sprite.svg#icon-alcovevan"></use>
               </svg>
               <span>Alcove</span>
             </span>
