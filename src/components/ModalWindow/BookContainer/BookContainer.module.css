@@ -25,6 +25,7 @@
   border: none;
   background-color: #f2f4f7;
   border-radius: 10px;
+  outline: none;
 }
 
 .inputCommentField {
@@ -35,6 +36,7 @@
   border: none;
   background-color: #f2f4f7;
   border-radius: 10px;
+  outline: none;
 }
 
 .form {
@@ -61,4 +63,16 @@
   border: none;
   background-color: #f2f4f7;
   border-radius: 10px;
+}
+
+.errorName {
+  border: 1px solid #e44848;
+}
+
+.errorEmail {
+  border: 1px solid #e44848;
+}
+
+.errorCalendar {
+  border: 1px solid #e44848;
 }

@@ -1,5 +1,4 @@
 import css from "./BookContainer.module.css";
-
 import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -44,9 +43,8 @@ const BookContainer = () => {
             id="name"
             {...register("name")}
             placeholder="Name"
-            className={css.inputField}
+            className={`${css.inputField} ${errors.name ? css.errorName : ""}`}
           />
-          {errors.name && <p>{errors.name.message}</p>}
         </div>
         <div>
           <label htmlFor="email"></label>
@@ -55,9 +53,10 @@ const BookContainer = () => {
             id="email"
             {...register("email")}
             placeholder="Email"
-            className={css.inputField}
+            className={`${css.inputField} ${
+              errors.email ? css.errorEmail : ""
+            }`}
           />
-          {errors.email && <p>{errors.email.message}</p>}
         </div>
         <div>
           <label htmlFor="bookingDate"></label>
@@ -70,11 +69,12 @@ const BookContainer = () => {
                 selected={field.value}
                 onChange={(date) => field.onChange(date)}
                 dateFormat="yyyy/MM/dd"
-                className={css.calendarField}
+                className={`${css.calendarField} ${
+                  errors.name ? css.errorCalendar : ""
+                }`}
               />
             )}
           />
-          {errors.bookingDate && <p>{errors.bookingDate.message}</p>}
         </div>
         <div>
           <label htmlFor="comment"></label>

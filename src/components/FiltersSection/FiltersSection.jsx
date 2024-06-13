@@ -1,19 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectCampers } from "../../redux//campers/selectors";
 import { setFilters } from "../../redux/filters/filtersSlice";
 import css from "./FiltersSection.module.css";
+import { nanoid } from "nanoid";
 
 import { icons } from "../../assets/index";
 
 const FiltersSection = () => {
-  const campers = useSelector(selectCampers);
-
   const dispatch = useDispatch();
-  const filters = useSelector((state) => state.filters);
-
-  const uniqueLocations = Array.from(
-    new Set(campers.map((camper) => camper.location))
-  );
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,43 +27,34 @@ const FiltersSection = () => {
     dispatch(setFilters(data));
   };
 
-  const locations = [
-    "Ukraine, Kyiv",
-    "Ukraine, Sumy",
-    "Ukraine, Dnipro",
-    "Ukraine, Poltava",
-    "Ukraine, Kharkiv",
-    "Ukraine, Odesa",
-  ];
-
   return (
     <div className={css.container}>
       <form className={css.filtersForm} onSubmit={handleSubmit}>
-        <p>Location</p>
-        <select name="location" id="location" className={css.location}>
-          <option value="">Select location</option>
-          <option key={1} value="Ukraine, Sumy">
-            Ukraine, Sumy
-          </option>
-          <option key={2} value="Ukraine, Dnipro">
-            Ukraine, Dnipro
-          </option>
-          <option key={3} value="Ukraine, Poltava">
-            Ukraine, Poltava
-          </option>
-          <option key={4} value="Ukraine, Kharkiv">
-            Ukraine, Kharkiv
-          </option>
-          <option key={5} value="Ukraine, Odesa">
-            Ukraine, Odesa
-          </option>
-
-          {/* {campers.map((camper) => (
-            <option key={camper._id} value={camper.location}>
-              {camper.location}
+        <p className={css.locationText}>Location</p>
+        <div className={css.locationContainer}>
+          <select name="location" id="location" className={css.location}>
+            <option value="">Select location</option>
+            <option key={nanoid()} value="Ukraine, Sumy">
+              Ukraine, Sumy
             </option>
-          ))} */}
-        </select>
+            <option key={nanoid()} value="Ukraine, Dnipro">
+              Ukraine, Dnipro
+            </option>
+            <option key={nanoid()} value="Ukraine, Poltava">
+              Ukraine, Poltava
+            </option>
+            <option key={nanoid()} value="Ukraine, Kharkiv">
+              Ukraine, Kharkiv
+            </option>
+            <option key={nanoid()} value="Ukraine, Odesa">
+              Ukraine, Odesa
+            </option>
+          </select>
+          <svg width="18px" height="20px" className={css.locationIcon}>
+            <use href={`${icons}#icon-map`}></use>
+          </svg>
+        </div>
+
         <p className={css.subtitleText}>Filters</p>
 
         <legend className={css.titleText}>Vehicle equipment</legend>

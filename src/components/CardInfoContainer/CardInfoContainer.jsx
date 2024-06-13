@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import ModalWindow from "../ModalWindow/ModalWindow";
 import css from "./CardInfoCintainer.module.css";
 import {
   addFavorite,
@@ -8,7 +7,6 @@ import {
 import { icons } from "../../assets/index";
 
 const CardInfoContainer = ({
-  camperId,
   name,
   price,
   rating,
@@ -17,9 +15,7 @@ const CardInfoContainer = ({
   transmission,
   engine,
   description,
-  kitchen,
   beds,
-  ac,
   reviews,
   reviewsRating,
   onClick,

@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import css from "./Features.module.css";
 import { icons } from "../../../assets/index.js";
+
 const Features = ({ camper }) => {
   return (
     <ul className={css.info}>
@@ -8,7 +8,7 @@ const Features = ({ camper }) => {
         <svg width="20px" height="20px" className={css.infoIcons}>
           <use href={`${icons}#icon-users`}></use>
         </svg>
-        <p>adults</p>
+        <p>{camper.adults}adults</p>
       </li>
       <li className={css.infoItem}>
         <svg width="20px" height="20px" className={css.infoIcons}>
@@ -38,13 +38,13 @@ const Features = ({ camper }) => {
         <svg width="20px" height="20px" className={css.icon}>
           <use href={`${icons}#icon-beds`}></use>
         </svg>
-        <p>beds</p>
+        <p>{camper.details.beds}beds</p>
       </li>
       <li className={css.infoItem}>
         <svg width="20px" height="20px" className={css.icon}>
           <use href={`${icons}#icon-air`}></use>
         </svg>
-        <p>air conditioner</p>
+        <p>{camper.details.airConditioner}air conditioner</p>
       </li>
       <li className={css.infoItem}>
         <svg width="20px" height="20px" className={css.icon}>
@@ -62,7 +62,7 @@ const Features = ({ camper }) => {
         <svg width="20px" height="20px" className={css.infoIcons}>
           <use href={`${icons}#icon-hob`}></use>
         </svg>
-        <p>hob</p>
+        <p>{camper.details.hob}hob</p>
       </li>
     </ul>
   );

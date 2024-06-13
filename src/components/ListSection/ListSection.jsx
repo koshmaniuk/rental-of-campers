@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CamperCard from "../CamperCard/CamperCard";
 import css from "./ListSection.module.css";
 import { getCampers } from "../../redux/campers/operations";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { nextPage } from "../../redux/campers/slice";
 
 const filterCampers = (campers, filters) => {

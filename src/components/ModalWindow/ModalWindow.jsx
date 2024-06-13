@@ -4,26 +4,17 @@ import BookContainer from "./BookContainer/BookContainer";
 import { icons } from "../../assets/index";
 import css from "./ModalWindow.module.css";
 import ReviewsContainer from "../ReviewsContainer/ReviewsContainer";
+import { nanoid } from "nanoid";
 
 const ModalWindow = ({
-  camperId,
   name,
   price,
-  rating,
   location,
-  adults,
-  transmission,
-  engine,
   description,
-  kitchen,
-  beds,
-  ac,
-  img,
   reviews,
   reviewsRating,
   image,
   onClose,
-  details,
   camper,
 }) => {
   const [activeComponent, setActiveComponent] = useState("features");
@@ -55,17 +46,15 @@ const ModalWindow = ({
 
   return (
     <div className={css.modalOverlay}>
-      {/* modal */}
       <div className={css.container}>
-        {/* close icon */}
         <span onClick={onClose} className={css.closeBtn}>
           <svg width="32px" height="32px" className={css.closeIcon}>
             <use href={`${icons}#icon-close`}></use>
           </svg>
         </span>
-        {/* name */}
+
         <h2 className={css.mainText}>{name}</h2>
-        {/* reviews */}
+
         <div className={css.reviewsContainer}>
           <svg width="16px" height="16px" className={css.ratingIcon}>
             <use href={`${icons}#icon-rating`}></use>
@@ -73,7 +62,7 @@ const ModalWindow = ({
           <a href="" className={css.reviewsRating}>
             {reviewsRating}({reviews} reviews)
           </a>
-          {/* location */}
+
           <div className={css.locationContainer}>
             <svg width="16px" height="16px" className={css.locationIcon}>
               <use href={`${icons}#icon-map`}></use>
@@ -81,15 +70,15 @@ const ModalWindow = ({
             {location}
           </div>
         </div>
-        {/* price */}
+
         <p className={css.priceText}>€{price}</p>
-        {/* images */}
+
         <div className={css.imageContainer}>
           {image.map((imag) => (
-            <img src={imag} alt="" className={css.image} />
+            <img src={imag} alt="" key={nanoid()} className={css.image} />
           ))}
         </div>
-        {/* description */}
+
         <p className={css.descrText}>{description}</p>
         <div className={css.linksContainer}>
           <a

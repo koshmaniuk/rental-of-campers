@@ -1,6 +1,6 @@
 import css from "./ReviewsContainer.module.css";
-import { useSelector } from "react-redux";
 import { icons } from "../../assets/index";
+
 const ReviewsContainer = ({ camper }) => {
   return (
     <div className={css.reviewsContainer}>
@@ -29,8 +29,6 @@ const ReviewsContainer = ({ camper }) => {
               </svg>
             </div>
           </div>
-
-          {/* <p>{review.reviewer_rating}</p> */}
           <p className={css.comment}>{review.comment}</p>
         </div>
       ))}

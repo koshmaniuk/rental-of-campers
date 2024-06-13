@@ -1,4 +1,5 @@
 import css from "./VehicleDetails.module.css";
+
 const VehicleDetails = ({ camper }) => {
   return (
     <div className={css.detailsContainer}>

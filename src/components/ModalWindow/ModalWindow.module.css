@@ -92,6 +92,13 @@
   color: #101828;
   text-decoration: none;
 }
+.linksText:focus {
+  text-decoration: underline;
+  text-decoration-color: #e44848;
+
+  text-underline-offset: 24px;
+  text-decoration-thickness: 5px;
+}
 
 .linksContainer {
   display: flex;
