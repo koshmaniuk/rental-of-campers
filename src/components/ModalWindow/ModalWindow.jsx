@@ -34,26 +34,25 @@ const ModalWindow = ({
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
-        onClose(); // Закриваємо модальне вікно при натисканні клавіші Escape
+        onClose();
       }
     };
 
     const handleClickOutside = (event) => {
       if (event.target.classList.contains(css.modalOverlay)) {
-        onClose(); // Закриваємо модальне вікно при кліку поза ним
+        onClose();
       }
     };
 
-    // Додаємо обробники подій при монтуванні компонента
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("click", handleClickOutside);
 
-    // При видаленні компонента видаляємо обробники подій
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [onClose]); // Вказуємо onClose як залежність для перезавантаження ефекту
+  }, [onClose]);
+
   return (
     <div className={css.modalOverlay}>
       {/* modal */}

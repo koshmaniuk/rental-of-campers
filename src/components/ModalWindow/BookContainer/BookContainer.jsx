@@ -27,7 +27,7 @@ const BookContainer = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    reset();
+    window.location.reload();
   };
 
   return (
